@@ -5,68 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 1 - Web Development Basics</title>
     <style>
+        :root {
+            --bg: #eef3f8;
+            --panel: #ffffff;
+            --text: #172033;
+            --muted: #5b6475;
+            --accent: #2f6fed;
+            --accent-soft: #e8f0ff;
+            --border: #d9e2ef;
+            --shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Trebuchet MS", "Verdana", sans-serif;
             line-height: 1.6;
             margin: 0;
-            background: #f4f7fb;
-            color: #222;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(47, 111, 237, 0.14), transparent 26%),
+                radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.10), transparent 22%),
+                var(--bg);
         }
+
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 32px 20px 48px;
+            padding: 28px 18px 48px;
         }
+
         .card {
             background: #fff;
-            border-radius: 14px;
-            padding: 24px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(217, 226, 239, 0.8);
         }
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+            color: #fff;
+            border-radius: 18px;
+            padding: 24px 26px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            margin: 0 0 8px;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 4vw, 42px);
+        }
+
+        .hero p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 68ch;
+        }
+
         h1 {
             margin-top: 0;
-            color: #0f172a;
+            color: var(--text);
         }
+
         h2 {
-            margin-top: 28px;
-            color: #1e293b;
-            border-left: 4px solid #2563eb;
-            padding-left: 10px;
+            margin: 26px 0 12px;
+            color: var(--text);
+            font-family: Georgia, serif;
+            font-size: 1.15rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 12px;
         }
+
         p, li {
             font-size: 16px;
+            color: var(--text);
         }
+
+        p {
+            margin-top: 0;
+        }
+
         ol {
-            padding-left: 20px;
+            padding-left: 22px;
+            margin-top: 10px;
         }
+
         pre {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 14px;
-            border-radius: 10px;
+            background: #0b1220;
+            color: #dbeafe;
+            padding: 16px;
+            border-radius: 14px;
             overflow-x: auto;
             font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .note {
-            background: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 12px 14px;
-            border-radius: 8px;
+            background: var(--accent-soft);
+            border: 1px solid #cfe0ff;
+            border-left: 5px solid var(--accent);
+            padding: 14px 16px;
+            border-radius: 12px;
+            color: #1e3a8a;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .mini-card {
+            background: #f8fbff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 16px;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--accent-soft);
+            border-radius: 999px;
+            padding: 6px 10px;
+            margin-bottom: 10px;
+        }
+
+        .screenshot-box {
+            border: 2px dashed #b8c9e6;
+            border-radius: 14px;
+            padding: 16px;
+            background: #fbfdff;
+        }
+
+        @media (max-width: 700px) {
+            .card {
+                padding: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>Assignment 1</h1>
-            <p>This is a short and simple explanation of basic web development topics.</p>
+            <div class="hero">
+                <h1>Assignment 1</h1>
+                <p>Short, easy, and humanized answers on web development basics.</p>
+            </div>
 
             <h2>1. Frontend, Backend, and Full-Stack</h2>
-            <p><strong>Frontend</strong> is the part users see, like buttons and pages. Example: the Netflix screen you click on.</p>
-            <p><strong>Backend</strong> is the hidden logic that handles data and requests. Example: the server that saves your login details.</p>
-            <p><strong>Full-stack</strong> means working on both frontend and backend. Example: a developer building a small online shop from page design to database.</p>
+            <div class="grid">
+                <div class="mini-card">
+                    <span class="label">Frontend</span>
+                    <p><strong>Frontend</strong> is what users see and click. Example: the Netflix screen or a shopping website page.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="label">Backend</span>
+                    <p><strong>Backend</strong> is the hidden part that handles data and logic. Example: saving login details on a server.</p>
+                </div>
+            </div>
+            <p style="margin-top: 12px;"><strong>Full-stack</strong> means working on both sides. Example: building a small online shop from page design to database.</p>
 
             <h2>2. Client-Server Model</h2>
+            <p>The client asks, the server responds, and the server can also fetch data from the database.</p>
             <pre>
 Client (Browser)  --->  Server  --->  Database
        ^                |
@@ -94,7 +207,10 @@ Client (Browser)  --->  Server  --->  Database
             <p><strong>Database administrator:</strong> keeps the database safe, fast, and organized.</p>
 
             <h2>7. VS Code Setup</h2>
-            <p>Install VS Code, add the Live Server extension, and use a browser for testing HTML, CSS, and JavaScript. <strong>Screenshot note:</strong> add your setup screenshot here before final submission.</p>
+            <div class="screenshot-box">
+                <p>Install VS Code, add the Live Server extension, and use a browser for testing HTML, CSS, and JavaScript.</p>
+                <p><strong>Screenshot note:</strong> add your setup screenshot here before final submission.</p>
+            </div>
 
             <h2>8. Static vs Dynamic Websites</h2>
             <p><strong>Static website:</strong> same content for everyone. Example: a personal portfolio.</p>
@@ -105,6 +221,7 @@ Client (Browser)  --->  Server  --->  Database
             <p>Chrome, Edge, and Opera use <strong>Blink</strong>; Firefox uses <strong>Gecko</strong>; Safari uses <strong>WebKit</strong>.</p>
 
             <h2>10. Basic Web Architecture Flow</h2>
+            <p>Client requests data, the server processes it, APIs connect services, and the database stores information.</p>
             <pre>
 User / Client -> Browser -> Server -> API -> Database
                      ^                         |
