@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background: #f3f6fb; color: #1f2937; margin: 0; padding: 24px;">
+<div style="max-width: 1100px; margin: 0 auto; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 28px; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);">
+    <h1 style="color: #0f172a; margin-top: 0; margin-bottom: 12px;">Course Registration</h1>
+    <form>
+        <fieldset style="border: 1px solid #dfe7f2; border-radius: 10px; padding: 16px;">
+            <legend style="font-weight: bold; color: #0f172a;">Student Information</legend>
+            <label for="name">Name:</label><br>
+            <input style="padding: 8px 10px; margin: 6px 0 12px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%; box-sizing: border-box;" type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input style="padding: 8px 10px; margin: 6px 0 12px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%; box-sizing: border-box;" type="email" id="email" name="email"><br><br>
+
+            <label for="course">Select Course:</label><br>
+            <select style="padding: 8px 10px; margin: 6px 0 12px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%; box-sizing: border-box;" id="course" name="course">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <h2 style="color: #1e293b; margin-top: 26px; margin-bottom: 8px;">Available Schedules</h2>
+    <table style="border-collapse: collapse; width: 100%; margin: 12px 0; background: #fff; border: 1px solid #dfe7f2;" border="1" cellpadding="8" cellspacing="0">
+        <th style="background: #eef4ff; color: #0f172a; padding: 10px; border: 1px solid #dfe7f2; text-align: left;"ead>
+            <tr>
+                <th style="background: #eef4ff; color: #0f172a; padding: 10px; border: 1px solid #dfe7f2; text-align: left;">Day</th>
+                <th style="background: #eef4ff; color: #0f172a; padding: 10px; border: 1px solid #dfe7f2; text-align: left;">Time</th>
+                <th style="background: #eef4ff; color: #0f172a; padding: 10px; border: 1px solid #dfe7f2; text-align: left;">Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Monday</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">10:00 AM</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Mr. Sharma</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Wednesday</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">1:00 PM</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Ms. Verma</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Friday</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">3:00 PM</td>
+                <td style="padding: 10px; border: 1px solid #dfe7f2; vertical-align: top;">Mr. Singh</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
