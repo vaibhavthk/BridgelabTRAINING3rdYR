@@ -1,0 +1,9 @@
+/* Core layout and responsive styling for selectors practice page */
+body{font-family:Arial,sans-serif;margin:0}#main-content{padding:1rem}p{color:#334155}.intro{font-weight:700}a[href]{color:#2563eb}
+/* Direct child selector */
+main>p{margin-bottom:.6rem}
+/* Adjacent and general sibling selectors */
+.intro+p{font-style:italic}.intro~ul{background:#eff6ff}
+/* Descendant selector */
+section p{color:#7c3aed}
+

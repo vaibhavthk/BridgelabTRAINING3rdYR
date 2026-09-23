@@ -1,0 +1,9 @@
+/* Core layout and responsive styling for advanced selectors demo */
+body{font-family:Arial,sans-serif;background:#f8fafc;margin:0;padding:1rem}.list li:nth-child(odd){background:#dbeafe}.list li::before{content:'• ';color:#2563eb}.list li::after{content:' ✓';color:#22c55e}
+/* Attribute selectors */
+input[type='text']{border:2px solid #3b82f6;padding:.5rem}a[href^='https']{color:#16a34a;font-weight:700}
+/* Pseudo classes */
+a:hover{text-decoration:underline}input:focus{outline:3px solid #93c5fd;outline-offset:2px}
+/* Combinators: > + ~ and descendant */
+.combinators>p{color:#1e293b}.combinators p+p{font-style:italic}.combinators p~span{font-weight:700}.combinators div p{color:#7c3aed}
+

@@ -1,0 +1,6 @@
+/* Core layout and responsive styling for three section homepage flex */
+body{margin:0;font-family:Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;background:#eef2ff}header{background:#1d4ed8;padding:1rem}nav{display:flex;justify-content:space-around;gap:1rem;flex-wrap:wrap}a{color:#fff;text-decoration:none}
+main{flex:1;display:flex;gap:1rem;padding:1.25rem;max-width:1100px;margin:auto;width:100%}section{background:#fff;border-radius:12px;padding:1rem;flex:1;transition:transform .25s ease}section:hover{transform:rotate(2deg)}
+footer{background:#0f172a;color:#fff;text-align:center;padding:1rem;margin-top:auto}
+@media (max-width:760px){main{flex-direction:column}}
+
