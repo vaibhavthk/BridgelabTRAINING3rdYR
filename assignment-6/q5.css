@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f6fb;
+  font-family: Arial, sans-serif;
+}
+.pricing {
+  width: min(1100px, 92%);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.card {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #d6deea;
+  text-align: center;
+  animation: fadeIn 0.8s ease both;
+  transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-10px); }
+.featured {
+  transform: scale(1.06);
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+.price { font-size: 1.6rem; font-weight: bold; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 750px) {
+  .pricing { flex-direction: column; }
+  .featured { transform: scale(1); }
+}
