@@ -1,0 +1,6 @@
+/* Core layout and responsive styling for dashboard grid layout */
+body{margin:0;font-family:Arial,sans-serif;background:#f8fafc}.dashboard{display:grid;grid-template-columns:220px 1fr;grid-template-rows:auto 1fr;min-height:100vh;gap:1rem;padding:1rem}header{grid-column:1/-1;background:#0f172a;color:#fff;padding:1rem;border-radius:10px}aside{background:#1e293b;color:#cbd5e1;padding:1rem;border-radius:10px}main{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:1rem}
+/* Main cards use fr units and one spans two columns */
+article{background:#fff;border-radius:10px;padding:1rem;min-height:120px;transition:transform .25s ease,box-shadow .25s ease}article:hover{transform:scale(1.03);box-shadow:0 10px 24px rgba(15,23,42,.2)}.wide{grid-column:span 2}
+@media (max-width:760px){.dashboard{grid-template-columns:1fr}.wide{grid-column:auto}main{grid-template-columns:1fr}}
+

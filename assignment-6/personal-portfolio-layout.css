@@ -1,0 +1,11 @@
+/* Core layout and responsive styling for personal portfolio layout */
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f8fafc;color:#1f2937;min-height:100vh;display:flex;flex-direction:column}
+/* Header uses Flexbox to keep name left and nav right */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:#0f172a;color:#fff}
+.topbar nav{display:flex;gap:1rem}.topbar a{color:#cbd5e1;text-decoration:none}.topbar a:focus-visible,.topbar a:hover{color:#fff;outline:2px solid #93c5fd;outline-offset:2px}
+/* About section centered with align-items/justify-content */
+.about{flex:1;display:flex;align-items:center;justify-content:center;gap:1.5rem;max-width:1000px;width:100%;margin:0 auto;padding:1.5rem}
+.about img{width:min(420px,100%);border-radius:16px}
+footer{text-align:center;padding:1rem;background:#e2e8f0}
+@media (max-width:700px){.topbar{flex-direction:column;gap:.75rem}.about{flex-direction:column;text-align:center}}
+

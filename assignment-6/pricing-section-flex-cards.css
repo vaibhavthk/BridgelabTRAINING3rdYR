@@ -1,0 +1,7 @@
+/* Core layout and responsive styling for pricing section flex cards */
+body{font-family:Arial,sans-serif;margin:0;background:#eff6ff;padding:2rem}h1{text-align:center}.cards{display:flex;gap:1rem;justify-content:center;align-items:stretch;max-width:950px;margin:auto}
+/* Middle card is intentionally larger */
+article{background:#fff;padding:1.2rem;border-radius:14px;flex:1;max-width:280px;text-align:center;animation:fadeIn .8s ease both;transition:transform .25s}.highlight{transform:scale(1.08);background:#1d4ed8;color:#fff}article:hover{transform:translateY(-10px)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media (max-width:750px){.cards{flex-direction:column;align-items:center}.highlight{transform:none}}
+

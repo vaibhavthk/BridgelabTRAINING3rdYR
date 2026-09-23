@@ -1,0 +1,6 @@
+/* Core layout and responsive styling for product gallery grid */
+body{font-family:system-ui,sans-serif;margin:0;background:#f1f5f9;padding:1.5rem}h1{text-align:center}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:auto}
+/* Equal-height cards with smooth hover scale */
+article{background:#fff;border-radius:12px;padding:1rem;min-height:140px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s ease;box-shadow:0 6px 18px rgba(15,23,42,.08)}article:hover{transform:scale(1.05)}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.grid{grid-template-columns:1fr}}
+

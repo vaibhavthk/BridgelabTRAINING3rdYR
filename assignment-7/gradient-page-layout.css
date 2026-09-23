@@ -1,0 +1,3 @@
+/* Core layout and responsive styling for gradient page layout */
+body{margin:0;font-family:Arial,sans-serif}header,footer{position:fixed;left:0;right:0;background:#0f172a;color:#fff;padding:.75rem;text-align:center;z-index:1}header{top:0}footer{bottom:0}main{padding:3.5rem 0 3rem}.linear,.radial{min-height:45vh;display:grid;place-items:center;text-align:center;padding:1rem}.linear{background:linear-gradient(120deg,#38bdf8,#a78bfa);color:#fff;background-attachment:fixed}.radial{background:radial-gradient(circle,#fef9c3,#f59e0b)}
+
